@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS Ninja - Cars</title>
+    <style>
+      body {
+        font-family: 'IBM Plex Mono';
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      form,
+      table {
+        float: left;
+        width: 50%;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+      }
+
+      input {
+        padding: 10px;
+        border: 1px solid #333;
+        width: 320px;
+        border-radius: 10px;
+      }
+
+      img {
+        height: auto;
+        max-width: 200px;
+      }
+
+      td,
+      th {
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+      }
+
+      button {
+        cursor: pointer;
+        font-size: 1em;
+        border-radius: 5px;
+        padding: 8px;
+        width: 180px;
+        color: #fff;
+        background-color: #14904a;
+        border: none;
+      }
+
+      .clean-field {
+        background-color: #098992;
+        color: #fff;
+      }
+
+      .clean-field:hover {
+        background-color: #165b94;
+      }
+
+      button:hover {
+        background-color: #147b41;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>
+        <span data-js="company-name"></span> -
+        <span data-js="company-phone"> </span>
+      </h2>
+    </header>
+
+    <form action="/" data-js="form-register">
+      <ul>
+        <li>
+          <label>Imagem do carro:</label>
+          <input type="url" data-js="image" required />
+        </li>
+        <li>
+          <label>Marca / Modelo:</label>
+          <input type="text" data-js="brand-model" required />
+        </li>
+        <li>
+          <label>Ano:</label>
+          <input type="text" data-js="year" required />
+        </li>
+        <li>
+          <label>Placa:</label>
+          <input type="text" data-js="plate" required />
+        </li>
+        <li>
+          <label>Cor:</label>
+          <input type="text" data-js="color" required />
+        </li>
+        <li>
+          <button type="submit">Cadastrar</button>
+          <button class="clean-field" data-js="clean-fields">
+            Limpar dados
+          </button>
+        </li>
+      </ul>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Imagem do Carro</th>
+          <th>Marca / Modelo</th>
+          <th>Ano</th>
+          <th>Placa</th>
+          <th>Cor</th>
+          <th>Remover</th>
+        </tr>
+      </thead>
+
+      <tbody data-js="table-car"></tbody>
+    </table>
+    <script src="dom.js"></script>
+    <script src="challenge-29.js"></script>
+  </body>
+</html>
